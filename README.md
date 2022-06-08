@@ -46,3 +46,7 @@ npm run build
 ```shell
 php -S localhost:8000 -t public
 ```
+
+
+
+Project based on: https://github.com/cherifGsoul/slim-inertiajs-demo
