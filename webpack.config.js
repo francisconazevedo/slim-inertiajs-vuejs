@@ -6,13 +6,14 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 }
 
 Encore
+    .enableVueLoader()
     .setOutputPath('public/build/')
     // .setOutputPath('build/')
     .setPublicPath('/build')
     .addLoader({
-        test: /\.(svelte)$/,
+        test: /\.(vue)$/,
         use: {
-            loader: 'svelte-loader',
+            loader: 'vue-loader',
             options: {
                 emitCss: true,
                 hotReload: true,
@@ -36,7 +37,7 @@ Encore
     // .enableSassLoader()
 
 const config = Encore.getWebpackConfig();
-config.resolve.mainFields = ['svelte', 'browser', 'module', 'main']
-config.resolve.extensions =  ['.wasm', '.mjs', '.js', '.json', '.jsx', '.vue', '.ts', '.tsx', '.svelte']
+config.resolve.mainFields = ['vue', 'browser', 'module', 'main']
+config.resolve.extensions =  ['.wasm', '.mjs', '.js', '.json', '.jsx', '.vue', '.ts', '.tsx', '.vue']
 
 module.exports = config
