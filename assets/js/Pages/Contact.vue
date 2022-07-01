@@ -1,12 +1,17 @@
 <template>
   <div>
-    <h1>Testando VueJS</h1>
+    <h1>Contact</h1>
+    <Link href="/">Contact</Link>
   </div>
 </template>
 
 <script>
+import { Link } from '@inertiajs/inertia-vue3'
+
 export default {
-  name: "ContactVue"
+  components: {
+    Link
+  }
 }
 </script>
 
