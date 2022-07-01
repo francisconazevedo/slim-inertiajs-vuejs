@@ -14,6 +14,14 @@ class ContactHandler implements RequestHandlerInterface
     public function handle(ServerRequestInterface $request): ResponseInterface
     {
         $inertia = $request->getAttribute(InertiaMiddleware::INERTIA_ATTRIBUTE);
-        return $inertia->render('Contact', []);
+
+        $contacts = [
+            ['id' => 1, 'type' => 'email', 'value' => 'contact@dev.com.br'],
+            ['id' => 2, 'type' => 'phone', 'value' => '(12) 3456-7890']
+        ];
+
+        return $inertia->render('Contact', [
+            'contacts' => $contacts
+        ]);
     }
 }
