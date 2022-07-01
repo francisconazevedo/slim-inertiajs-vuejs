@@ -1,12 +1,13 @@
 const Encore = require('@symfony/webpack-encore')
 const path = require('path')
+const { VueLoaderPlugin } = require('vue-loader')
 
 if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev')
 }
 
 Encore
-    .enableVueLoader()
+    .addPlugin(new VueLoaderPlugin())
     .setOutputPath('public/build/')
     // .setOutputPath('build/')
     .setPublicPath('/build')
