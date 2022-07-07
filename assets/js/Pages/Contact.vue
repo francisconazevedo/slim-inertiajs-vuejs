@@ -6,7 +6,7 @@
         <strong>{{ contact.type }}: </strong> {{ contact.value }}
       </li>
     </ul>
-    <Link href="/">Home</Link>
+    <Link href="/">Home page</Link>
   </div>
 </template>
 
